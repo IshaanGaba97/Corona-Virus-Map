@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoronaVirus Map</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #map{
+            width: 100vw;
+            height: 100vh;
+        }
+        #head{
+            height: 50px;
+            text-align: center;
+            background-color: #343332   ;
+            color: white;
+            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;  
+            padding: 4px 0px;
+        }
+        #info{
+            height: 30px;
+            text-align: center;
+            background-color: #343332   ;
+            color: white;
+            font-family: 'Montserrat', sans-serif;  
+            padding: 4px 0px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="head">Corona Virus Map</div>
+    <div id='map'></div>
+    <div id="info">*As the cases are higher the color of marker is also darker.</div>
+</body>
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+
+<script src="/index.js"></script>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiaXNoYWFuZ2FiYTk3IiwiYSI6ImNrdHR5ajU4czF1cWwyb21wN2VrcHY0YXgifQ.VLqgbJcFqOkMPmBY1DoPEg';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/dark-v10',
+    zoom : 1,
+    center : [0,20]
+  });
+</script>
+
+</html>
